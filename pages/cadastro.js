@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Login.module.css'
 import LoginCard from '../src/components/loginCard/loginCard'
+import Input from '../src/components/input/input'
+import Button from '../src/components/button/button'
 
 export default function CadastroPage() {
   return (
@@ -14,7 +16,11 @@ export default function CadastroPage() {
 
       <main className={styles.background}>
         <LoginCard title="Crie sua conta">
-          cadastro
+          <form className={styles.form}>
+          <Input type="email" placeholder="Seu e-mail" />
+          <Input type="password" placeholder="Sua senha" />
+          <Button>Entrar</Button>
+          </form>
         </LoginCard>
       </main>
 
